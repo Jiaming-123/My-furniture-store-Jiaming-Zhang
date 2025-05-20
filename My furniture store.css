@@ -220,10 +220,12 @@ body {
     font-size: 2rem;
     font-weight: 700;
   }
+
   .promo-image img {
     width: 100%;
     height: auto;
   }
+
   .product-row {
     display: flex;
     flex-direction: row;
@@ -267,7 +269,14 @@ body {
     color: black;
     margin: 0.5rem 0;
   }
-  
+
+  .price-group {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
   .product-price {
     font-size: 32px;
     font-weight: 700;
@@ -275,7 +284,16 @@ body {
     display: inline-block;
     vertical-align: bottom;
   }
-  
+
+  .product-price2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: black;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-top: 3.3rem;
+  }
+
   .product-original-price {
     font-size: 16px;
     font-weight: 300;
