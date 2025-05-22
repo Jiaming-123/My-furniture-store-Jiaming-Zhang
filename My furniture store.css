@@ -154,7 +154,7 @@ body {
   width: 238px;
   height: 35px;
   position: absolute;
-  left: 88px;
+  left: 60px;
   top: 0;
   display: flex;
   flex-direction: column;
@@ -169,7 +169,7 @@ body {
   width: 18px;
   height: 18px;
   position: absolute;
-  left: 56px;
+  left: 28px;
   top: 9px;
   object-fit: contain;
 }
@@ -198,11 +198,12 @@ body {
   width: 330px;
   height: 230px;
   object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 
 .category-item img:hover {
+  transform: scale(1.1); 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
@@ -262,7 +263,9 @@ body {
   position: relative;
   scroll-snap-align: start;
   transition: box-shadow 0.3s ease;
+  overflow: hidden;              
 }
+
 .product-card:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   background: #DBCA83;
@@ -274,6 +277,11 @@ body {
   object-fit: cover;
   display: block;
   margin: 0 auto 1rem;
+  transition: transform 0.3s ease; 
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.1);
 }
 
 .product-title {
@@ -566,7 +574,26 @@ body {
   body {
     overflow-x: hidden;
   }
-  
+  :root {
+    --header-height: 80px;
+    --category-height: 35px;
+  }
+  .site-header {
+    position: fixed; top: 0; left: 0; right: 0;
+    height: var(--header-height);
+    z-index: 1000;
+  }
+  .category-bar {
+    position: fixed; top: var(--header-height);
+    left: 0; right: 0;
+    height: var(--category-height);
+    z-index: 999;
+  }
+
+  body {
+    padding-top: calc(var(--header-height) + var(--category-height));
+    margin: 0;
+  }
   .container { 
     padding: 0 16px; 
     box-sizing: border-box; 
@@ -605,7 +632,7 @@ body {
     bottom: 9px;       
     left: 20px;
     right: 20px;        
-    width: calc(100% - 66px); 
+    width: calc(100% - 40px); 
     height: 28px;      
     box-sizing: border-box;
   }
@@ -618,7 +645,7 @@ body {
   .search-bar img  { 
     width: 16px; height: 16px; 
   }
-
+  
   .h2 {
     padding: 20px 0;
     font-size: 22px;
@@ -806,4 +833,254 @@ body {
     font-size: .75rem;
     opacity: .6;
   }
+}
+
+
+
+/* sofa.css */
+@media screen and (max-width: 1368px) and (min-width: 1024px) {
+  .sofa-page .hero {
+    position: relative; 
+    margin-top: 0px;
+    text-align: left;
+  }
+  .sofa-page .hero img { 
+    width: 100%; 
+    height: auto; }
+
+  .sofa-page .hero h1 {
+    position: absolute; 
+    bottom: 20px; left: 50px;
+    color: #fff; 
+    font-size: 64px; 
+    margin: 0;
+  }
+  .sofa-page .container { 
+    padding: 20px; 
+  }
+  
+  /* Filter */
+  .filter-container {
+    display: inline-flex;         
+    align-items: center;          
+    margin-left: 50px;
+    margin-top: 150px;  
+  }
+
+  .filter-icon {
+    width: 30px;
+    height: 24px;
+  }
+
+  .filter-text {
+    font-size: 24px;
+    color: #000;
+  }
+
+  .sofa-page .product-row {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;        
+    gap: 1.5rem;
+    padding: 0 2rem;            
+
+  }
+ 
+  .sofa-page .product-card {
+    position: relative;
+    flex: 1 1 calc(33% - 20px);
+    max-width: calc(33% - 20px);
+    background: none; padding: 16px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid #eee;
+    transition: box-shadow 0.3s ease;
+    margin-top: 2rem; 
+  }
+  .sofa-page .product-card:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    background: #DBCA83;
+  }
+  .sofa-page .sale-badge {
+    position: absolute; 
+    top: 16px; 
+    left: 16px;
+    background: #D72F2F; 
+    color: #fff;
+    padding: 4px 8px; 
+    font-weight: bold;
+  }
+  .sofa-page .product-image {
+    width: 350px; 
+    height: 350px;
+    display: block; 
+    margin-bottom: 12px;
+    transition: transform 0.3s ease;
+  }
+  .sofa-page .product-card:hover .product-image {
+    transform: scale(1.05);
+  }
+  .sofa-page .product-title { 
+    font-size: 24px; 
+    margin: 0 0 8px; }
+  .sofa-page .price-group {
+    display: flex; align-items: baseline;
+    gap: 8px; margin-bottom: 12px;
+  }
+  .sofa-page .product-price { 
+    font-size: 32px; 
+    font-weight: bold; 
+  }
+  .sofa-page .product-price2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: black;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-top: 1.5rem;
+  }
+  .sofa-page .product-original-price {
+    font-size: 16px; 
+    text-decoration: line-through;
+    color: #999;
+  }
+  .sofa-page .product-discount { 
+    font-size: 16px; 
+    color: #D72F2F;
+    margin-top: 0.25rem; 
+  }
+  .sofa-page .cart-button {
+    position: absolute; bottom: 16px; right: 16px;
+    background: none; border: none; cursor: pointer;
+  }
+}
+
+/* iPhone 12 Pro responsive for Sofa page */
+@media only screen and (max-width: 390px) {
+
+   
+  .sofa-page .hero {
+    position: relative;      
+    overflow: hidden;        
+  }
+
+  .sofa-page .hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .sofa-page .hero h1 {
+    position: absolute;      
+    bottom: 1rem;          
+    left: 1rem;             
+    margin: 0;              
+    font-size: 28px;
+    color: #fff;
+  }
+  .sofa-page .filter-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 100px 0 20px 30px; 
+  }
+
+  .sofa-page .filter-icon {
+    width: 20px;
+    height: 16px;
+  }
+
+  .sofa-page .filter-text {
+    font-size: 16px;
+  }
+  
+  /* Product cards */
+  .sofa-page .product-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  
+    gap: 16px;
+    padding: 0 2px;
+    max-width: 390px;      
+    margin: 0 auto;  
+  }
+
+  .sofa-page .product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px;   
+    height: 300px;        
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .sofa-page .product-image {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    margin-bottom: 8px;
+  }
+
+  
+  .sofa-page .product-title {
+    font-size: 12px;
+    position: absolute;
+    left: 5px;
+    top: 140px; 
+  }
+
+  .sofa-page .price-group {
+    display: flex;
+    gap: 6px;
+  }
+  .sofa-page .product-price,
+  .sofa-page .product-price2 {
+    position: absolute;
+    left: 5px;
+    bottom: 80px; 
+    font-size: 16px;
+  }
+  .sofa-page .product-original-price {
+    font-size: 8px;
+    position: absolute;
+    left: 60px;
+    bottom: 80px; 
+  }
+  .sofa-page .product-discount {
+    position: absolute;
+    left: 5px;
+    bottom: 65px;  
+    font-size: 8px;
+  }
+
+  .sofa-page .sale-badge {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: auto;     
+    background: #D72F2F;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1;
+    padding: 4px 8px;
+    white-space: nowrap;
+    z-index: 1;
+  }
+
+  .sofa-page .cart-button {
+    position: absolute;
+    bottom: 70px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    background: none;
+  }
+  .sofa-page .cart-button img {
+    width: 100%;
+    height: 100%;
+  }
+
 }

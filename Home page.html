@@ -10,7 +10,6 @@
   <header class="site-header">
     <div class="header-bg"></div>
     <img class="logo" src="Images/logo.png" alt="Logo" />
-
     <div>
       <img class="icon user-icon" src="./Images/icon1.jpg" alt="icon1" />
     </div>
@@ -26,6 +25,22 @@
         <img class="search-icon" src="./Images/search.jpg" alt="Search Icon" />
       </button>
     </div>
+
+    <!-- Search Interaction Script -->
+  <script>
+    const input = document.getElementById("searchInput");
+    const button = document.getElementById("searchButton");
+
+    input.addEventListener("focus", () => {
+      input.placeholder = "Sofa";
+    });
+
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      const query = input.value.trim() || input.placeholder;
+      window.location.href = 'Sofa page.html';
+    });
+  </script>
   </header>
 
   <!-- category bar -->
@@ -89,6 +104,7 @@
     </div>
   </section>
 
+  <!-- New arrivals product cards -->
   <h2 class="h2">New arrives</h2>
   <div class="product-row">
     <div class="product-card">
@@ -138,6 +154,7 @@
     </div>
   </div>
 
+  <!-- Customer reviews -->
   <h2 class="h2">Customer reviews</h2>
   <section class="customer-reviews container">
     <div class="review">
@@ -152,6 +169,7 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-links">
@@ -178,21 +196,5 @@
       <div class="copyright">© 2025 My Furniture Store</div>
     </div>
   </footer>
-
-  <!-- Search Interaction Script -->
-  <script>
-    const input = document.getElementById("searchInput");
-    const button = document.getElementById("searchButton");
-
-    input.addEventListener("focus", () => {
-      input.placeholder = "Sofa";
-    });
-
-    button.addEventListener("click", (e) => {
-      e.preventDefault();
-      const query = input.value.trim() || input.placeholder;
-      window.location.href = `search.html?q=${encodeURIComponent(query)}`;
-    });
-  </script>
 </body>
 </html>

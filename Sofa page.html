@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofas | My Furniture Store</title>
+    <link rel="stylesheet" href="My furniture store.css">
+</head>
+<body class="sofa-page">
+    <!-- Header -->
+    <header class="site-header">
+    <div class="header-bg"></div>
+    <a href="Home page.html">
+      <img class="logo" src="Images/logo.png" alt="Logo">
+    </a>
+
+    <!-- Search bar -->
+    <div class="search-bar">
+      <input type="text" placeholder="Search">
+      <button><img src="./Images/search.jpg" alt="Search"></button>
+    </div>
+
+    <!-- Search Interaction Script -->
+    <script>
+      const input = document.getElementById("searchInput");
+      const button = document.getElementById("searchButton");
+
+      input.addEventListener("focus", () => {
+        input.placeholder = "Sofa";
+      });
+
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+        const query = input.value.trim() || input.placeholder;
+        window.location.href = 'Sofa page.html';
+      });
+    </script>
+    <img class="icon user-icon" src="./Images/icon1.jpg" alt="User">
+    <img class="icon cart-icon" src="./Images/icon2.jpg" alt="Cart">
+  </header>
+
+   <!-- Category bar -->
+  <div class="category-bar">
+    <div class="category-bg"></div>
+    <div class="category-content">
+        <img class="category-icon" src="./images/category.jpg" alt="Category Icon" />
+        <span class="category-text">Category</span>
+    </div>
+  </div>
+
+  <!-- Category bar scroll behavior -->
+  <script>
+    let lastScrollY = window.scrollY;
+    const categoryBar = document.querySelector('.category-bar');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > lastScrollY) {
+        categoryBar.style.transform = 'translateY(-100%)';
+      } else {
+        categoryBar.style.transform = 'translateY(0)';
+      }
+      lastScrollY = window.scrollY;
+    });
+  </script>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <img src="./Images/sofa hero.jpg" alt="Sofa Hero">
+    <h1>Sofas</h1>
+  </section>
+
+  <!-- Filter -->
+  <div class="filter-container">
+    <img class="filter-icon" src="./Images/filter.jpg" alt="Filter"></div>
+    <span class="filter-text">Filter</span>
+  </div>
+
+  <!-- Products Grid -->
+  <main class="shop-category container">
+    <div class="product-row">
+      <div class="product-card">
+        <span class="sale-badge">SALE</span>
+        <img class="product-image" src="./Images/17.png" alt="Sofa1">
+        <h2 class="product-title">Shiloah 3+2 Seater PU Leather Sofa</h2>
+        <div class="price-group">
+          <span class="product-price">$4,849</span>
+          <span class="product-original-price">$5,999</span>
+        </div>
+        <div class="product-discount">Save $1,150</div>
+        <button class="cart-button"><img src="./Images/icon3.jpg" alt="Add to cart"></button>
+      </div>
+      
+      <div class="product-card">
+        <img class="product-image" src="./Images/15.png" alt="Sofa2">
+        <h2 class="product-title">Tribeca 3 seater leatherette sofa - black</h2>
+        <div class="price-group">
+          <span class="product-price">$1,599</span>
+        </div>
+        <button class="cart-button"><img src="./Images/icon3.jpg" alt="Add to cart"></button>
+      </div>
+
+      <div class="product-card">
+        <img class="product-image" src="./Images/25.png" alt="Sofa3">
+        <h2 class="product-title">Finlay 4 seater fabric lounge suite - grey</h2>
+        <div class="price-group">
+          <span class="product-price">$2,599</span>
+        </div>
+        <button class="cart-button"><img src="./Images/icon3.jpg" alt="Add to cart"></button>
+      </div>
+
+      <div class="product-card">
+        <span class="sale-badge">SALE</span>
+        <img class="product-image" src="./Images/27.png" alt="Sofa4">
+        <h2 class="product-title">Yemina favric corner sofa bed with pull out storage - grey</h2>
+        <div class="price-group">
+          <span class="product-price">$3,999</span>
+          <span class="product-original-price">$4,999</span>
+        </div>
+        <div class="product-discount">Save $1,000</div>
+        <button class="cart-button"><img src="./Images/icon3.jpg" alt="Add to cart"></button>
+      </div>
+
+      <div class="product-card">
+        <img class="product-image" src="./Images/sofa.jpg" alt="Sofa5">
+        <h2 class="product-title">Sonoma 3 seater sofaa</h2>
+        <div class="price-group">
+          <span class="product-price2">$1,999</span>
+        </div>
+        <button class="cart-button"><img src="./Images/icon3.jpg" alt="Add to cart"></button>
+      </div>
+
+      <div class="product-card">
+        <span class="sale-badge">SALE</span>
+        <img class="product-image" src="./Images/26.png" alt="Sofa6">
+        <h2 class="product-title">Mikey sofa fabric lounge suite 3+1+1</h2>
+        <div class="price-group">
+          <span class="product-price">$4,999</span>
+          <span class="product-original-price">$5,999</span>
+        </div>
+        <div class="product-discount">Save $1,000</div>
+        <button class="cart-button"><img src="./Images/icon3.jpg" alt="Add to cart"></button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <h4>About the store</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Become a customer</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Return policy</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </div>
+      <div class="social">
+        <h4>Follow us</h4>
+        <div class="social-icons">
+          <a href="#"><img src="./Images/fb.jpg" alt="fb" /></a>
+          <a href="#"><img src="./Images/ig.jpg" alt="ig" /></a>
+        </div>
+      </div>
+      <div class="payments">
+        <img src="./Images/cards.jpg" alt="Accepted payment methods" />
+      </div>
+      <div class="copyright">© 2025 My Furniture Store</div>
+    </div>
+  </footer>
+</body>
+</html>
