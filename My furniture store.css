@@ -127,6 +127,16 @@ body {
   display: block;
 }
 
+.product-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.product-link .product-card {
+  height: 100%;
+  width: 100%;
+}
 /* Category bar */
 
 .category-bar {
@@ -883,7 +893,6 @@ body {
     justify-content: space-between;        
     gap: 1.5rem;
     padding: 0 2rem;            
-
   }
  
   .sofa-page .product-card {
@@ -1084,3 +1093,280 @@ body {
   }
 
 }
+
+/* Product page.css */
+@media screen and (max-width: 1368px) and (min-width: 1024px) {
+  /* —— Layout Wrapper —— */
+  .product-page .product-layout {
+    display: flex;
+    margin-top: 160px;
+  }
+
+  /* —— Hero Image —— */
+  .product-page .hero {
+    position: fixed;
+    top: 160px;
+    left: 100px;
+    width: 768px;
+    height: 604px;
+    z-index: 0;
+  }
+
+  .product-page .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* —— Content Area —— */
+  .product-page .content {
+    margin-left: 920px;
+    padding-right: 100px;
+    flex: 1;
+  }
+
+  .product-page .product-detail {
+    max-width: 600px;
+  }
+
+  .product-page .sale-badge {
+    background: #D72F2F;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 0.4rem 1rem;
+    display: inline-block;
+    top: 160px;
+    left: auto;
+  }
+
+  .product-page .product-title {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+
+  /* —— Price Section —— */
+  .product-page .price-info {
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .product-page .product-price {
+    display: flex;
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+  }
+
+  .product-page .product-original-price {
+    position: absolute;
+    top: 25px;
+    left: 130px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #000;
+    text-decoration: line-through;;
+  }
+
+  .product-page .price-divider {
+    position: flex;
+    margin-bottom: 50px;
+    left: 160px;
+    width: 330px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .product-page .product-discount {
+    font-size: 16px;
+    color: #D72F2F;
+    margin-bottom: 100px;
+  }
+
+  /* —— Quantity Selector —— */
+  .product-page .quantity-selector {
+    width: 126px;
+    height: 46px;
+    border: 0.5px solid #D0D0D0;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-bottom: 1.5rem;
+  }
+
+  .product-page .qty-btn {
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .product-page .qty-value {
+    font-size: 16px;
+  }
+
+  /* —— Buttons —— */
+  .product-page .btn {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 1rem;
+  }
+
+  .product-page .add-to-cart {
+    background: #DBCA83;
+  }
+
+  .product-page .buy-now {
+    background: #000;
+    color: #fff;
+  }
+
+  /* —— Description —— */
+  .product-page .description {
+    max-width: 600px;
+    margin-top: 3rem;
+  }
+
+  .product-page .description h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .product-page .description p {
+    font-size: 18px;
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+
+  .product-page .description p strong {
+    font-weight: 700;
+  }
+}
+
+/* iPhone 12 Pro responsive for Product page */
+@media screen and (max-width: 420px) {
+  .product-page .product-layout {
+    flex-direction: column;
+    margin-top: 0px;
+  }
+
+  .product-page .hero {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .product-page .hero-img {
+    width: 100%;
+    height: auto;
+  }
+  .product-page .sale-badge {
+    background: #D72F2F;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0.2rem 0.8rem;
+    display: inline-block;
+    top: 520px;
+    left: auto;
+  }
+  .product-page .content {
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 1rem;
+  }
+
+  .product-page .product-title {
+    font-size: 24px;
+  }
+  .product-page .price-divider {
+    position: flex;
+    margin-bottom: 30px;
+    left: 160px;
+    width: 330px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .product-page .product-price {
+    font-size: 28px;
+  }
+
+  .product-page .product-original-price {
+    position: relative;
+    top: auto;
+    left: 15px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #000;
+    text-decoration: line-through;
+  }
+
+  .product-page .product-discount {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .product-page .btn {
+    font-size: 18px;
+  }
+  .product-page .quantity-selector {
+    width: 100px;
+    height: 40px;
+    border: 0.5px solid #D0D0D0;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-bottom: 1.5rem;
+  }
+
+  .product-page .qty-btn {
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .product-page .qty-value {
+    font-size: 16px;
+  }
+
+  /* —— Buttons —— */
+  .product-page .btn {
+    width: 97%;
+    height: 50px;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 1rem;
+  }
+
+  .product-page .add-to-cart {
+    background: #DBCA83;
+  }
+
+  .product-page .buy-now {
+    background: #000;
+    color: #fff;
+  }
+  .product-page .description h2 {
+    font-size: 22px;
+  }
+
+  .product-page .description p {
+    font-size: 16px;
+  }
+} 

@@ -78,18 +78,31 @@
   <!-- Products Grid -->
   <main class="shop-category container">
     <div class="product-row">
-      <div class="product-card">
-        <span class="sale-badge">SALE</span>
-        <img class="product-image" src="./Images/17.png" alt="Sofa1">
-        <h2 class="product-title">Shiloah 3+2 Seater PU Leather Sofa</h2>
-        <div class="price-group">
-          <span class="product-price">$4,849</span>
-          <span class="product-original-price">$5,999</span>
+        <div class="product-card" data-link="Product page.html">
+          <span class="sale-badge">SALE</span>
+          <img class="product-image" src="./Images/17.png" alt="Sofa1">
+          <h2 class="product-title">Shiloah 3+2 Seater PU Leather Sofa</h2>
+          <div class="price-group">
+            <span class="product-price">$4,849</span>
+            <span class="product-original-price">$5,999</span>
+          </div>
+          <div class="product-discount">Save $1,150</div>
+          <button class="cart-button"><img src="./Images/icon3.jpg" alt="Add to cart"></button>
         </div>
-        <div class="product-discount">Save $1,150</div>
-        <button class="cart-button"><img src="./Images/icon3.jpg" alt="Add to cart"></button>
-      </div>
-      
+    <script>
+      document.querySelectorAll('.product-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const link = card.dataset.link;
+          if (link) {
+            window.location.href = link;
+          }
+        });
+      });
+
+      document.querySelectorAll('.cart-button').forEach(button => {
+      button.addEventListener('click', e => e.stopPropagation());
+      });
+</script>
       <div class="product-card">
         <img class="product-image" src="./Images/15.png" alt="Sofa2">
         <h2 class="product-title">Tribeca 3 seater leatherette sofa - black</h2>
@@ -137,12 +150,13 @@
           <span class="product-price">$4,999</span>
           <span class="product-original-price">$5,999</span>
         </div>
+        
         <div class="product-discount">Save $1,000</div>
         <button class="cart-button"><img src="./Images/icon3.jpg" alt="Add to cart"></button>
       </div>
     </div>
   </main>
-
+  
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
@@ -170,5 +184,19 @@
       <div class="copyright">© 2025 My Furniture Store</div>
     </div>
   </footer>
+<script>
+  document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const link = card.dataset.link;
+      if (link) {
+        window.location.href = link;
+      }
+    });
+  });
+
+  document.querySelectorAll('.cart-button').forEach(button => {
+    button.addEventListener('click', e => e.stopPropagation());
+  });
+</script>
 </body>
 </html>

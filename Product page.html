@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sofas | My Furniture Store</title>
+  <link rel="stylesheet" href="My furniture store.css" />
+</head>
+<body class="product-page">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-bg"></div>
+    <a href="Home page.html"><img class="logo" src="Images/logo.png" alt="Logo" /></a>
+
+    <!-- Search bar -->
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search" />
+      <button id="searchButton"><img src="./Images/search.jpg" alt="Search" /></button>
+    </div>
+
+    <img class="icon user-icon" src="./Images/icon1.jpg" alt="User" />
+    <img class="icon cart-icon" src="./Images/icon2.jpg" alt="Cart" />
+  </header>
+
+  <!-- Category Bar -->
+  <div class="category-bar">
+    <div class="category-bg"></div>
+    <div class="category-content">
+      <img class="category-icon" src="./images/category.jpg" alt="Category Icon" />
+      <span class="category-text">Category</span>
+    </div>
+  </div>
+
+  <!-- Product Page Layout -->
+  <div class="product-layout">
+    <!-- Left: Hero image (fixed) -->
+    <div class="hero">
+      <img src="./Images/17.png" alt="Sofa Image" class="hero-img" />
+    </div>
+
+    <!-- Product detail -->
+    <div class="content">
+      <div class="product-detail">
+        <div class="sale-badge">SALE</div>
+        <h1 class="product-title">Shiloah 3+2 seater PU leather sofa lounge set - brown</h1>
+        <div class="price-divider"></div>
+        <div class="price-info">
+          <span class="product-price">$4,849</span>
+          <span class="product-original-price">$5,999</span>
+        </div>
+        <div class="product-discount">Save $1,150</div>
+
+        <div class="quantity-selector">
+          <button class="qty-btn">–</button>
+          <span class="qty-value">1</span>
+          <button class="qty-btn">+</button>
+        </div>
+
+        <button class="btn add-to-cart">ADD TO CART</button>
+        <button class="btn buy-now">BUY NOW</button>
+
+        <div class="description">
+          <h2>Product description</h2>
+          <p><strong>Dimensions:</strong><br>900(H) x 2300(L) x 850(D),<br>900(H) x 1800(L) x 850(D).</p>
+          <p><strong>Colour:</strong> Assorted colours.</p>
+          <p><strong>Material:</strong> Assorted ranges.</p>
+          <p><strong>Features:</strong><br>– RHF chaise (also available in LHF).<br>– Includes pull out double sofa bed.</p>
+          <p><strong>Origin:</strong> Made in Australia.</p>
+          <p><strong>Guarantee:</strong> 5 Year foundation guarantee.</p>
+          <p><strong>Packaging:</strong> Wrapped for easy delivery.</p>
+          <p><strong>Cleaning:</strong> Wipe clean with a damp / dry cloth.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search script -->
+  <script>
+    const input = document.getElementById("searchInput");
+    const button = document.getElementById("searchButton");
+
+    input.addEventListener("focus", () => {
+      input.placeholder = "Sofa";
+    });
+
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      const query = input.value.trim() || input.placeholder;
+      window.location.href = 'Sofa page.html';
+    });
+  </script>
+</body>
+</html>
