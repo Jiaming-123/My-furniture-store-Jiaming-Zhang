@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart Page</title>
+  <link rel="stylesheet" href="My furniture store.css">
+</head>
+<body>
+  <body class="cart-page">
+    <!-- Header -->
+    <header class="site-header">
+    <div class="header-bg"></div>
+    <a href="Home page.html">
+      <img class="logo" src="Images/logo.png" alt="Logo">
+    </a>
+
+    <!-- Search bar -->
+    <div class="search-bar">
+      <input type="text" placeholder="Search">
+      <button><img src="./Images/search.jpg" alt="Search"></button>
+    </div>
+
+    <!-- Search Interaction Script -->
+    <script>
+      const input = document.getElementById("searchInput");
+      const button = document.getElementById("searchButton");
+
+      input.addEventListener("focus", () => {
+        input.placeholder = "Sofa";
+      });
+
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+        const query = input.value.trim() || input.placeholder;
+        window.location.href = 'Sofa page.html';
+      });
+    </script>
+    <img class="icon user-icon" src="./Images/icon1.jpg" alt="User">
+    <img class="icon cart-icon" src="./Images/icon2.jpg" alt="Cart">
+  </header>
+
+   <!-- Category bar -->
+  <div class="category-bar">
+    <div class="category-bg"></div>
+    <div class="category-content">
+        <img class="category-icon" src="./images/category.jpg" alt="Category Icon" />
+        <span class="category-text">Category</span>
+    </div>
+  </div>
+
+  <!-- Category bar scroll behavior -->
+  <script>
+    let lastScrollY = window.scrollY;
+    const categoryBar = document.querySelector('.category-bar');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > lastScrollY) {
+        categoryBar.style.transform = 'translateY(-100%)';
+      } else {
+        categoryBar.style.transform = 'translateY(0)';
+      }
+      lastScrollY = window.scrollY;
+    });
+  </script>
+      <!-- Cart Item 1 -->
+      <div class="cart-item">
+        <img src="./Images/17.png" alt="Sofa1" class="product-thumbnail">
+        <div class="product-info">
+          <h2 class="product-name">Shiloah 3+2 seater PU leather sofa lounge set - brown</h2>
+          <div class="product-controls">
+            <div class="quantity-selector">
+              <button>-</button>
+              <span>1</span>
+              <button>+</button>
+            </div>
+            <div class="product-price">$4,849</div>
+            <div class="product-original-price">$5,999</div>
+            <div class="product-discount">Save $1,150</div>
+          </div>
+          <div class="remove">Remove item</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Cart Item 2 -->
+      <div class="cart-item">
+        <img src="./Images/15.png" alt="Sofa2" class="product-thumbnail">
+        <div class="product-info">
+          <h2 class="product-name">Tribeca 3 seater leatherette sofa - black</h2>
+          <div class="product-controls">
+            <div class="quantity-selector">
+              <button>-</button>
+              <span>1</span>
+              <button>+</button>
+            </div>
+            <div class="product-price">$1,599</div>
+          </div>
+          <div class="remove">Remove item</div>
+        </div>
+      </div>
+
+      <!-- Summary -->
+      <section class="summary">
+        <div class="row">
+          <span>Subtotal</span>
+          <span>$6,488</span>
+        </div>
+        <div class="row">
+          <span>Delivery</span>
+          <span>Calculated at checkout</span>
+        </div>
+        <div class="row">
+          <span>Add a coupon</span>
+          <input type="text" placeholder="Enter code">
+        </div>
+        <div class="row total">
+          <span>Total</span>
+          <span>$6,488</span>
+        </div>
+        <button class="checkout-btn">CHECK OUT</button>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

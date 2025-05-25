@@ -1370,3 +1370,148 @@ body {
     font-size: 16px;
   }
 } 
+
+/* Cart page css */
+@media screen and (max-width: 1368px) and (min-width: 1024px) {
+
+  .cart-page .cart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px;
+    background: #FFF8F0;
+    font-family: Helvetica, sans-serif;
+  }
+
+  /* —— 标题 —— */
+  .cart-page .cart-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  /* —— 左侧：商品列表 —— */
+  .cart-page .cart-items {
+    flex: 1 1 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .cart-page .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 40px;
+  }
+
+  .cart-page .cart-item-image {
+    width: 140px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .cart-page .cart-item-details {
+    flex: 1;
+  }
+
+  .cart-page .cart-item-name {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 12px;
+  }
+
+  .cart-page .cart-item-remove {
+    font-size: 14px;
+    color: #333;
+    margin-top: 12px;
+  }
+
+  .cart-page .cart-item-price-group {
+    text-align: right;
+    min-width: 160px;
+  }
+
+  .cart-page .cart-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+  }
+
+  .cart-page .cart-original-price {
+    font-size: 16px;
+    color: #999;
+    text-decoration: line-through;
+  }
+
+  .cart-page .cart-discount {
+    font-size: 16px;
+    color: #D72F2F;
+    margin-top: 8px;
+  }
+
+  .cart-page .quantity-selector {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    height: 40px;
+    width: 120px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    margin-top: 12px;
+  }
+
+  .cart-page .qty-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .cart-page .qty-value {
+    font-size: 16px;
+  }
+
+
+  .cart-page .cart-summary {
+    flex: 1 1 35%;
+    background: #FFF8F0;
+    padding: 0 20px;
+  }
+
+  .cart-page .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .cart-page .summary-row.total {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .cart-page .summary-input {
+    width: 100%;
+    height: 36px;
+    padding: 4px 12px;
+    font-size: 14px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+  }
+
+  .cart-page .checkout-button {
+    width: 100%;
+    height: 50px;
+    background: #DBCA83;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+}
