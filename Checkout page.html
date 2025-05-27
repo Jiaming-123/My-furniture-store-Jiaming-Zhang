@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Page</title>
+  <link rel="stylesheet" href="My furniture store.css">
+</head>
+<body class="checkout-page">
+  <header class="site-header">
+    <div class="header-bg"></div>
+    <a href="Home page.html">
+      <img class="logo" src="Images/logo.png" alt="Logo">
+    </a>
+  </header>
+
+  <div class="checkout-page main-wrapper">
+    <!-- Left section -->
+    <div class="checkout-page left-section">
+      <h1>Billing details</h1>
+
+      <div class="checkout-page form-group">
+        <h2>Contact</h2>
+        <input type="email" placeholder="Email">
+        <label><input type="checkbox" checked> Email with news and offers</label>
+      </div>
+
+      <div class="checkout-page form-group">
+        <h2>Delivery<h2>
+        <div class="checkout-page radio-group">
+            <label class="delivery-option">
+              <input type="radio" name="delivery" value="shipping" checked>
+              <span>Shipping</span>
+            </label>
+            <label class="delivery-option">
+              <input type="radio" name="delivery" value="pickup">
+              <span>Pickup in store</span>
+            </label>
+        </div>
+      </div>
+      <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const options = document.querySelectorAll(".delivery-option");
+            options.forEach(option => {
+              const radio = option.querySelector("input[type='radio']");
+              if (radio.checked) {
+                option.classList.add("active");
+              }
+               radio.addEventListener("change", () => {
+                  options.forEach(opt => opt.classList.remove("active"));
+                  option.classList.add("active");
+                });
+            });
+           });
+        </script>
+      <div class="checkout-page form-group">
+       <div class="checkout-page select-wrapper">
+          <label for="state">Country/Region</label>
+          <select id="state" name="state">
+            <option selected>Australia</option>
+          </select>
+        </div>
+        <input type="text" placeholder="First name">
+        <input type="text" placeholder="Last name">
+        <input type="text" placeholder="Address">
+        <input type="text" placeholder="Apartment, suite, etc. (optional)">
+        <input type="text" placeholder="City">
+        <div class="checkout-page select-wrapper">
+          <label for="state">State/Territory</label>
+          <select id="state" name="state">
+            <option selected>VIC</option>
+            <option>NSW</option>
+            <option>QLD</option>
+            <option>WA</option>
+            <option>TAS</option>
+            <option>SA</option>
+            <option>ACT</option>
+            <option>NT</option>
+          </select>
+        </div>
+        <input type="text" placeholder="Postcode">
+        <input type="text" placeholder="Phone">
+      </div>
+    </div>
+
+    <!-- Right section -->
+    <div class="checkout-page right-section">
+      <div class="checkout-page form-group">
+        <h2>Payment</h2>
+        <div class="checkout-page payment-header">
+          <span>Credit card</span>
+          <img calss="checkout-page card-img" src="./Images/Cards2.png" alt="Cards">
+        </div>
+        <div class="checkout-page payment-box">
+          <input type="text" placeholder="Card number">
+          <input type="text" placeholder="Expiration date (MM / YY)">
+          <input type="text" placeholder="Security code">
+          <input type="text" placeholder="Name on card">
+          <label><input type="checkbox" checked> Use shipping address as billing address</label>
+        </div>
+      </div>
+
+      <div class="checkout-page form-group">
+        <h2>Order summary</h2>
+
+        <div class="checkout-page summary-card">
+          <img src="./Images/17.png" alt="Item">
+          <div class="item-title">Shiloah 3+2 seater PU leather sofa lounge set - brown</div>
+          <div class="summary-price">$4,849</div>
+        </div>
+
+        <div class="checkout-page summary-card">
+          <img src="./Images/15.png" alt="Item">
+          <div class="item-title">Tribeca 3 seater leatherette sofa - black</div>
+          <div class="summary-price">$1,599</div>
+        </div>
+
+        <div class="checkout-page summary-total">
+          <span>Total</span>
+          <span>$6,488</span>
+        </div>
+
+        <button class="checkout-page pay-button">PAY NOW</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
