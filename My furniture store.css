@@ -821,8 +821,6 @@ body {
     min-width: 0;      
   }
 
-  .footer-links {
-  }
   .footer-links h4 { margin-bottom: .5rem; font-size: 1rem; }
   .footer-links li { font-size: .875rem; line-height: 1.2; }
 
@@ -1227,7 +1225,9 @@ body {
   .product-page .add-to-cart {
     background: #DBCA83;
   }
-
+  .product-page a {
+    text-decoration: none;
+  }
   .product-page .buy-now {
     background: #000;
     color: #fff;
@@ -1366,10 +1366,15 @@ body {
     background: #DBCA83;
   }
 
+  .product-page a {
+    text-decoration: none;
+  }
+  
   .product-page .buy-now {
     background: #000;
     color: #fff;
   }
+
   .product-page .description h2 {
     font-size: 22px;
   }
@@ -1817,8 +1822,6 @@ body {
     appearance: none;   
     -webkit-appearance: none;
     -moz-appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23999' stroke-width='2' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
     background-position: right 1rem center;
     background-size: 10px 6px;
   }
@@ -1916,11 +1919,12 @@ body {
 
   .checkout-page.pay-button {
     background: #DBCA83;
-    font-size: 20px;
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: 400;
     padding: 1rem;
     border: none;
     width: 100%;
-    font-weight: 400;
     margin-top: 1.5rem;
     cursor: pointer;
   }
@@ -2096,8 +2100,24 @@ body {
     padding: 1rem;
     border: none;
     width: 100%;
-    font-weight: 600;
+    font-weight: 400;
     margin-top: 1.5rem;
     cursor: pointer;
   }
 }
+
+  /* Confirmation of order page */
+  .confirmation-image {
+    display: block;      
+    margin: 2rem auto;   
+    max-width: 100%;    
+    height: auto;
+  }
+  @media screen and (max-width: 390px) {
+    .confirmation-image {
+      display: block;      
+      margin: 2rem auto;   
+      max-width: 85%;    
+      height: auto;
+    }
+  }
